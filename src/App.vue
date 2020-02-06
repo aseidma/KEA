@@ -1,32 +1,55 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <b-navbar type="dark" variant="dark">
+        <b-navbar-nav>
+          <b-nav-item to="/">Startseite</b-nav-item>
+        </b-navbar-nav>
+
+        <b-navbar-nav class="ml-auto">
+          <!-- Navbar dropdowns -->
+          <b-nav-item-dropdown text="Buchen" right>
+            <b-dropdown-item to="/add">Hinzufügen</b-dropdown-item>
+            <b-dropdown-item to="/remove">Entfernen</b-dropdown-item>
+          </b-nav-item-dropdown>
+
+          <b-nav-item-dropdown text="In & Out" right>
+            <b-dropdown-item to="/inward">Inward</b-dropdown-item>
+            <b-dropdown-item to="/outward">Outward</b-dropdown-item>
+          </b-nav-item-dropdown>
+
+          <b-nav-item to="/orders" right>Bestellungen</b-nav-item>
+          <b-nav-item to="/stock" right>Bestand</b-nav-item>
+          <b-nav-item to="/supplies" right>Vorrat</b-nav-item>
+        </b-navbar-nav>
+      </b-navbar>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
+<script>
+import Vue from "vue";
+import BootstrapVue from "bootstrap-vue";
+
+Vue.use(BootstrapVue);
+
+export default {};
+</script>
+
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
 }
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: rgb(255, 217, 0);
 }
 </style>
