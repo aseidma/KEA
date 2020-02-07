@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1>KEA Warenwirtschaftssystem</h1>
-    <h2>We ❤️ Hotdogs & Money</h2>
+    <h2>We ❤️ Hot dogs & Furniture</h2>
 
     <h3 class="mt-5" style="color: #ffcc00;">Schnellzugriff</h3>
     <div class="quick-link-box">
