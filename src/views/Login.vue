@@ -59,7 +59,6 @@ export default {
 
 <style>
 .login .container {
-    margin-top: 50px;
-    padding: 15%;
+    padding: 0% 15%;
 }
 </style>

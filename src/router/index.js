@@ -3,12 +3,12 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Add from '../views/Add.vue'
 import Remove from '../views/Remove.vue'
-import Inward from '../views/Inward.vue'
+import Movement from '../views/Movement.vue'
 import Orders from '../views/Orders.vue'
-import Outward from '../views/Outward.vue'
 import Stock from '../views/Stock.vue'
 import Supplies from '../views/Supplies.vue'
 import Login from '../views/Login.vue'
+import AddContact from '../views/AddContact.vue'
 import firebase from '../../firebase/index.js'
 
 Vue.use(VueRouter)
@@ -31,6 +31,7 @@ const routes = [
     name: 'home',
     component: Home,
     meta: {
+      title: 'KEA Warensystem',
       requiresAuth: true
     }
   },
@@ -51,9 +52,9 @@ const routes = [
     }
   },
   {
-    path: '/inward',
+    path: '/movement',
     name: 'inward',
-    component: Inward,
+    component: Movement,
     meta: {
       requiresAuth: true
     }
@@ -62,14 +63,6 @@ const routes = [
     path: '/orders',
     name: 'orders',
     component: Orders,
-    meta: {
-      requiresAuth: true
-    }
-  },
-  {
-    path: '/outward',
-    name: 'outward',
-    component: Outward,
     meta: {
       requiresAuth: true
     }
@@ -86,6 +79,14 @@ const routes = [
     path: '/supplies',
     name: 'supplies',
     component: Supplies,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/add-contact',
+    name: 'AddContact',
+    component: AddContact,
     meta: {
       requiresAuth: true
     }
