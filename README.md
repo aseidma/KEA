@@ -7,4 +7,4 @@ To run locally:
 - open/click localhost url
 
 
-Made by Cornelius Neumann & Alexander Seidmann
+Made by Alexander Seidmann
